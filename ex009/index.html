@@ -4,38 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outras formatações</title>
+    <title>Listas</title>
 </head>
 <body>
-    <h1>Outras formatações</h1>
-
-    <h2>Código fonte</h2>
-    <p>O comando <code>document.getElementById('id') </code> é escrito em Javascript</p>
-
-    <pre>
-        <code>
-    num = int(input('Digite um número'))
-    if num % 2 == 0:
-        print(f'O número {num} é par')
-    else:
-        print(f'O número {num} é ÍMPAR)
-    print('Fim do programa')
-        </code>
-    </pre>
-
-    <h2>Citações</h2>
-    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q></p>
-
-    <h2>Citação completa</h2>
-    <p>Segundo Jeff Noble, no sei livro HTML:
-        <blockquote cite="urldolivro_para_SEO">A diferença entre elementos inline e bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos do texto.</blockquote>
-    </p>
-
-    <h2>Abreviação</h2>
-    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando</p>
-
-    <h2>Texto invertido</h2>
-    <p><bdo dir="rtl">Texto invertido, porque meu</bdo></p>
+    <h1>Trabalhando com listas</h1>
+    <h2>Listas ordenadas</h2>
+    <ol type="A">
+        <li>Acordar</li>
+        <li>Fazer café</li>
+        <li>Fazer torrada</li>
+        <li>Escovar os dentes</li>
+        <li>Sair de casa</li>
+    </ol>
     
+    <h2>Listas não ordenadas</h2>
+    <ul type="circle">
+        <li>Acordar</li>
+        <li>Fazer café</li>
+        <li>Fazer torrada</li>
+        <li>Escovar os dentes</li>
+        <li>Sair de casa</li>
+    </ul>
+
+    <h2>Juntando listas 1.0</h2>
+    <ol>
+        <li>Antigas</li>
+            <ol type="a">
+                <li>Lista aninhada</li>
+                <li>Número 2</li>
+            </ol>
+        <li>Novas</li>
+            <ol type="i" start="2">
+                <li>Numero romano</li>
+                <li>Numero romano 2</li>
+            </ol>
+        <li>Itens não ordenados abaixo</li>
+            <ul type="square">
+                <li>Primeiro item</li>
+                <li>Segundo</li>
+                    <ul type="disc">
+                        <li>Nível ainda mais pra dentro</li>
+                    </ul>
+                <li>Terceiro</li>
+            </ul>
+    </ol>
 </body>
 </html>
