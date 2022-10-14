@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Vídeos</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(43, 43, 43);
+            color: rgb(201, 201, 201);
+        }
+        #corpo{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding-left: 30%;
+            padding-right: 30%;
+            justify-content: center;
+            align-items: center;
+        }
+        #gridvideos{
+            display: flex;
+            flex-wrap: wrap;
+            grid-auto-rows: min-content;
+            justify-content: center;
+            gap: 12px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo">
+        <h1>Vídeos para assistir</h1>
+        <div id="gridvideos">
+            <img src="imagens/thumb-hardware.png" alt="Vídeo Hardware">
+            <img src="imagens/thumb-html.png" alt="Vídeo HTML">
+            <img src="imagens/thumb-js.png" alt="Vídeo JavaScript">
+            <img src="imagens/thumb-python.png" alt="Vídeo Python">
+
+        </div>
+    
+    </div>
+</body>
+</html>
