@@ -1,113 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popup</title>
+    <title>Exercício 2</title>
     <style>
-        :root{
-            --cor-botao: rgb(35, 139, 187);
+        html, body{
+            margin: auto;
+            width: 100%;
+            height: 100vh;
         }
-        .overlay{
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.39);
-            overflow-x: hidden;
-
-        }
-        #container-popup{
-            background-color: white;
-            margin-top: 10%;
-            margin-left: 40%;
-            margin-right: 40%;
-            padding: 20px;
-            position:relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            border-radius: 7px;
-            box-shadow: 13px 17px 24px -7px rgba(0,0,0,0.3);
-            -webkit-box-shadow: 13px 17px 24px -7px rgba(0,0,0,0.3);
-            -moz-box-shadow: 13px 17px 24px -7px rgba(0,0,0,0.3);
-            /* animation: ani-overlay 1s normal 0.3s; */
-
-        }
-        a{
-            text-align: center;
-            color: white;
-            background-color: var(--cor-botao);
+        footer{
+            margin: 0%;
             padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        a:hover{
-            opacity: 0.80;
-            background-color: var(--cor-botao);
-            transition: 0.15s;
-            box-shadow: 10px 10px 9px -9px rgba(0,0,0,0.44);
-            -webkit-box-shadow: 10px 10px 9px -9px rgba(0,0,0,0.44);
-            -moz-box-shadow: 10px 10px 9px -9px rgba(0,0,0,0.44);
-        }
-        #btnFecha{
-            position: absolute;
-            top: 0px;
-            left: auto;
-            right: 10px;
-        }
-
-        @media screen and (max-height: 360px) {
-            #container-popup{
-                margin-top: 10%;
-                margin-left: 20%;
-                margin-right: 20%;
-                padding: 15px;
-                font-size: 20px;    
-            }
-            }
-            .overlay .closebtn {
-            font-size: 40px;
-            top: 15px;
-            right: 35px;
-            }
-
-        @keyframes ani-overlay{
-            to{
-                top: 0;
-            }
-            from {
-                top: 100px;
-            }
+            text-align: center;
+            background-color: darkgrey;
         }
     </style>
 </head>
 <body>
-    <script src="script.js"></script>
-
-    <div id="popup" class="overlay">
-        <div id="container-popup" class="container">
-            <a href="">Recarregar a página</a>
-            <a href="javascript:btnRed()">Mudar a cor dos botões para vermelho</a>
-            <a href="javascript:btnBlue()">Mudar a cor dos botões para azul</a>
-            <a href="javascript:darkMode()">Modo escuro</a>
-            <a href="javascript:fechaPopup()">Clique para sair</a>
-            <svg id="btnFecha" style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" onclick="fechaPopup()" />
-            </svg>
-        </div>
-    </div>
-
-    <input type="button" value="Popup" id="popup" name="popup" onclick="abrePopup()">
-    <input type="button" value="Teste" id="teste" name="teste" onclick="teste()">
-
-
-    
+    <footer>&copy; Empresa Fantasma - 2022</footer>
 </body>
 </html>
