@@ -5,31 +5,20 @@ const mostraCidade = (endereco) => {
 }
 
 const buscar = async() =>{
-    const regcep = /^[0-9]{8}$/;
     var cep = document.querySelector('#cep').value;
     cep = cep.replace(/\D/g, ''); //remove letras do input
+    const regcep = /^[0-9]{8}$/;
 
     if(regcep.test(cep)){
         const url = `http://viacep.com.br/ws/${cep}/json/`; //chamada da api
         // fetch(url).then(dados => dados.json().then(console.log));
         const dados = await fetch(url);
         const endereco = await dados.json();
-        console.log(endereco);
         mostraCidade(endereco);
     }
     else{
+        document.querySelector('#cidade').innerHTML = "";
+        document.querySelector('#cep').value = "";
         alert("Erro: O CEP informado é inválido!");
-        document.querySelector('#cidade').innerHTML = null;
-        let cepvalor = document.querySelector('#cep');
-        cepvalor.value = "";
     }
-
-
-
-    const url = `http://viacep.com.br/ws/${cep}/json/`; //chamada da api
-    // fetch(url).then(dados => dados.json().then(console.log));
-    const dados = await fetch(url);
-    const endereco = await dados.json();
-    console.log(endereco);
-    mostraCidade(endereco);
 }

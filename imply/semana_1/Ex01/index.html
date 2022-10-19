@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Popup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
     <style>
+        *{
+            font-family: 'Inter', sans-serif;
+        }
         html, body{
             margin: auto;
             width: 100%;
@@ -41,6 +45,10 @@
             -webkit-box-shadow: 13px 17px 24px -7px rgba(0,0,0,0.3);
             -moz-box-shadow: 13px 17px 24px -7px rgba(0,0,0,0.3);
             /* animation: ani-overlay 1s normal 0.3s; */
+        }
+        #fundo{
+            align-items: center;
+            margin: 5%;
         }
         a{
             text-align: center;
@@ -96,23 +104,25 @@
 
     <div id="popup" class="overlay">
         <div id="container-popup" class="container">
+            <h3>Insira o seu e-mail:</h3>
             <input type="email" name="email" id="email">
-            <input type="submit" value="Enviar">
-
+            <a id="btnEnviar" href="javascript:recebeEmail()">Enviar</a>
             <a href="">Recarregar a página</a>
             <a href="javascript:btnRed()">Mudar a cor dos botões para vermelho</a>
             <a href="javascript:btnBlue()">Mudar a cor dos botões para azul</a>
             <a href="javascript:darkMode()">Modo escuro</a>
-            <a href="javascript:fechaPopup()">Clique para sair</a>
             <svg id="btnFecha" style="width:24px;height:24px" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" onclick="fechaPopup()" />
             </svg>
         </div>
     </div>
 
-    <input type="button" value="Popup" id="popup" name="popup" onclick="abrePopup()">
-    <input type="button" value="Teste" id="teste" name="teste" onclick="teste()">
-
+    <div id="fundo">
+        <a onclick="abrePopup()">Popup</a>
+        <a onclick="teste()">Teste</a>
+        <input type="button" value="Popup" id="popup" name="popup" onclick="abrePopup()">
+        <input type="button" value="Teste" id="teste" name="teste" onclick="teste()">
+    </div>
 
     
 </body>
