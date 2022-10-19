@@ -28,9 +28,15 @@
             background-color: rgba(0, 0, 0, 0.39);
             overflow-x: hidden;
         }
+        #main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
         #container-popup{
             background-color: white;
-            margin-top: 10%;
+            margin-top: 7%;
             margin-left: 40%;
             margin-right: 40%;
             padding: 20px;
@@ -48,9 +54,19 @@
         }
         #fundo{
             align-items: center;
-            margin: 5%;
+            margin-left: 30%;
+            margin-right: 30%;
+            margin-top: 30px;
+        }
+        #fundo a{
+            padding: 15px;
+            font-size: 22px;
+        }
+        #emailusuario{
+            padding: 10px;
         }
         a{
+            font-size: 18px;
             text-align: center;
             color: white;
             background-color: var(--cor-botao);
@@ -67,11 +83,23 @@
             -webkit-box-shadow: 10px 10px 9px -9px rgba(0,0,0,0.44);
             -moz-box-shadow: 10px 10px 9px -9px rgba(0,0,0,0.44);
         }
+        input{
+            width: 80%;
+            margin-bottom: 15px;
+        }
+        .id-campo{
+            font-size: 22px;
+            text-decoration: underline rgba(0, 0, 0, 0.438);
+            margin: 5px;
+        }
         #btnFecha{
             position: absolute;
             top: 0px;
             left: auto;
             right: 10px;
+        }
+        #btnEnviar{
+            margin-bottom: 20px;
         }
 
         @media screen and (max-height: 360px) {
@@ -104,25 +132,37 @@
 
     <div id="popup" class="overlay">
         <div id="container-popup" class="container">
-            <h3>Insira o seu e-mail:</h3>
-            <input type="email" name="email" id="email">
-            <a id="btnEnviar" href="javascript:recebeEmail()">Enviar</a>
-            <a href="">Recarregar a página</a>
+            <h3 class="id-campo">Insira o seu e-mail:</h3>
+            <input type="email" name="email" id="email" placeholder="exemplo@dominio.com">
+            <a id="btnEnviar" href="javascript:getEmail()">
+                <div style="display: flex; flex-direction: row; gap: 4px;">
+                    <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                    </svg>
+                    Enviar
+                </div>
+            </a>
             <a href="javascript:btnRed()">Mudar a cor dos botões para vermelho</a>
             <a href="javascript:btnBlue()">Mudar a cor dos botões para azul</a>
             <a href="javascript:darkMode()">Modo escuro</a>
-            <svg id="btnFecha" style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" onclick="fechaPopup()" />
-            </svg>
+            
+            <a onclick="fechaPopup()" style="background:none; color: currentColor">
+                <svg id="btnFecha" style="width:30px;height:30px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" onclick="fechaPopup()" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div id="main">
+        <div id="fundo">
+            <a onclick="abrePopup()">Popup</a>
+            <a onclick="teste()">Teste</a>
+        </div>
+        <div id="resultado">
+            <p id="emailusuario"></p>
         </div>
     </div>
 
-    <div id="fundo">
-        <a onclick="abrePopup()">Popup</a>
-        <a onclick="teste()">Teste</a>
-        <input type="button" value="Popup" id="popup" name="popup" onclick="abrePopup()">
-        <input type="button" value="Teste" id="teste" name="teste" onclick="teste()">
-    </div>
 
     
 </body>

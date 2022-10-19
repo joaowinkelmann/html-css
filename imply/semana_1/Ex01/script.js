@@ -1,5 +1,4 @@
 function abrePopup(){
-    // window.alert("Teste de interatividade");
     document.getElementById('popup').style.width = "100%";
 }
 
@@ -11,8 +10,20 @@ function teste(){
     window.alert("Essa mensagem não deverá ser visível após o popup");
 }
 
+function getEmail(){
+    let email = document.querySelector('#email').value;
+    const regemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(email != "" && regemail.test(email)){
+        document.querySelector('#emailusuario').innerHTML = `O e-mail informado pelo usuário foi ${email}`;
+    }
+    else{
+        window.alert("Erro: E-mail inválido!");
+        document.querySelector('#emailusuario').innerHTML = ""
+    }
+}
 
-//trocar cores
+
+//Trocar Cores
 function btnRed(){
     document.querySelector(':root').style.setProperty('--cor-botao', 'rgb(216, 76, 33)');
 }
