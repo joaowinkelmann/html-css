@@ -15,18 +15,68 @@
             margin: auto;
         }
         body{
-            background-color:steelblue;
+            background-image: url(./wallpaper.jpg);
+            background-position: center;
+            background-size: cover;
             font-family: 'Inter', sans-serif;
         }
         #title{
+            padding: 20px;
+            color: rgb(255, 255, 255);
             text-align: center;
+            text-shadow: 2px 2px 4px black;
+        }
+        #campos, #resposta{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            margin-left: 30%;
+            margin-right: 30%;
+            border-radius: 10px;
+        }
+        h3{
+            margin-bottom: 0px;
+        }
+        #btnBusca{
+            background-color: rgb(29, 116, 111);
+            color: whitesmoke;
+            text-decoration: none;
+            padding: 7px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 5%;
+        }
+        #cep{
+            width: 70%;
+            margin: 5%;
+            margin-bottom: 10%;
+        }
+        @media screen and (max-height: 360px) {
+            #cep{
+                margin: 40px;
+            }
         }
     </style>
 </head>
 <body>
+    <script src="script.js"></script>
+    <div id="img-fundo"></div>
     <div id="main">
         <div id="title">
-            <h1>Encontre a sua cidade a partir de um cep</h1>
+            <h1>Encontre uma cidade a partir de um CEP</h1>
+        </div>
+        <div id="campos">
+            <h3>Insira o CEP abaixo:</h3>
+            <input type="text" name="cep" id="cep" placeholder="Ex. 01001000 ou 01001-000">
+            <a id="btnBusca" href="javascript:buscar()">Buscar CEP</a>
+        </div>
+        <div id="resposta">
+            <p id="cidade"></p>
         </div>
     </div>
     
