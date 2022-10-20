@@ -1,5 +1,5 @@
 const mostraCidade = (endereco) => {
-    document.getElementById("resposta").style.visibility = "visible"; 
+    document.getElementById("overlay").style.visibility = "visible"; 
     let cidadevalor = endereco.localidade;
     document.querySelector('#cidade').innerHTML = `A cidade do CEP informado é ${cidadevalor}.`;
 }
@@ -19,6 +19,7 @@ const buscar = async() =>{
     else{
         document.querySelector('#cidade').innerHTML = "";
         document.querySelector('#cep').value = "";
+        document.getElementById('overlay').style.visibility = "hidden";
         alert("Erro: O CEP informado é inválido!");
     }
 }
