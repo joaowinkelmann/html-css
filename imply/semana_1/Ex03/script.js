@@ -1,7 +1,11 @@
 const mostraCidade = (endereco) => {
     document.getElementById("overlay").style.visibility = "visible"; 
     let cidadevalor = endereco.localidade;
-    document.querySelector('#cidade').innerHTML = `A cidade do CEP informado é ${cidadevalor}.`;
+    document.querySelector('#cidade').innerHTML = `A cidade correspondente ao CEP informado é ${cidadevalor}.`;
+}
+
+function fechaPopup(){
+    document.getElementById("overlay").style.visibility = "hidden";
 }
 
 const buscar = async() =>{
