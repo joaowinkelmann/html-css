@@ -1,4 +1,8 @@
 const mostraCidade = (endereco) => {
+    if ((endereco.localidade) == undefined){
+        alert("Erro: O CEP informado não possui uma localidade correspondente")
+        return;
+    }
     document.getElementById("overlay").style.visibility = "visible"; 
     let cidadevalor = endereco.localidade;
     document.querySelector('#cidade').innerHTML = `A cidade correspondente ao CEP informado é ${cidadevalor}.`;
@@ -24,6 +28,6 @@ const buscar = async() =>{
         document.querySelector('#cidade').innerHTML = "";
         document.querySelector('#cep').value = "";
         document.getElementById('overlay').style.visibility = "hidden";
-        alert("Erro: O CEP informado é inválido!");
+        alert("Erro: O formato do CEP informado é inválido!");
     }
 }
