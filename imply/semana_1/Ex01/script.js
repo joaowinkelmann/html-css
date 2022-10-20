@@ -18,7 +18,7 @@ function getEmail(){
     }
     else{
         window.alert("Erro: E-mail inválido!");
-        document.querySelector('#emailusuario').innerHTML = ""
+        document.getElementById("email").value = "";
     }
 }
 
