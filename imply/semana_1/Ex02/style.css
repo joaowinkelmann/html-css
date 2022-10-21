@@ -13,7 +13,6 @@ video{
 html, body{
     margin: 0px;
     width: 100%;
-    height: 100vh;
     font-family: 'Open Sans', sans-serif;
 }
 .help{
@@ -32,20 +31,19 @@ html, body{
 #container-video{
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 
     overflow: hidden;
 
     text-align: center;
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: center;
     
 }
 #main{
     position: relative;
     width: 100%;
-    height: 100vh;
 }
 #nav{
     width: 60%;
@@ -104,10 +102,11 @@ h1{
 header{
     color: white;
     width: 100%;
-    background-color: rgba(67, 117, 133, 0.61);
+    background-color: #4375859c;
     margin: 0px;
 }
 footer{
+    color: whitesmoke;
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -115,9 +114,9 @@ footer{
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    background-color: darkgrey;
+    background-color: #0B132B;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 1000px) {
     #container-desc{
         flex-direction: column;
         gap: 50px;
@@ -129,8 +128,5 @@ footer{
     header{
         padding-left: 10%;
         padding-right: 10%;
-    }
-    footer{
-        visibility: hidden;
     }
 }
