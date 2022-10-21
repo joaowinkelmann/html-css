@@ -3,4 +3,3 @@ window.onload = function(){
         document.querySelector("video").src = "video.mp4";
     }
 }
-

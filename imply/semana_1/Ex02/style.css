@@ -69,6 +69,7 @@ html, body{
     gap: 10px;
 }
 #logo{
+    font-family: 'Rubik', sans-serif;
     display: flex;
     flex-direction: row;
     align-items: center;
