@@ -1,3 +1,7 @@
+window.onload = function(){
+    lightMode();
+}
+
 function abrePopup(){
     document.getElementById('popup').style.width = "100%";
 }

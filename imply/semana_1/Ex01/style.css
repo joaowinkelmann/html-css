@@ -86,7 +86,7 @@ input{
 }
 #btnFecha{
     position: absolute;
-    top: 0px;
+    top: 10px;
     left: auto;
     right: 10px;
 }
