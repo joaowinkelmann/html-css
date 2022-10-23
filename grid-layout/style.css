@@ -1,4 +1,17 @@
 .grid-container{
     display: grid;
     grid-template-columns: auto auto auto;
+    background-color: orange;
+    padding: 10px; /*margem externa aplicada ao grid*/
+    gap: 5px; /*distancia entre as celulas */
+    row-gap: 100px; /*espaco entre as linhas do grid*/
+    column-gap: 10px; /*espaco entre as colunas do grid*/
+}
+
+.grid-container > div{
+    background-color: lightskyblue;
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px; /*margem aplicada ao exterior do conteudo do grid*/
 }
