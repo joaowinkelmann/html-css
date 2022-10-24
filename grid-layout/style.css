@@ -1,10 +1,10 @@
 .grid-container{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto; /*define o tamanho pra cada uma das colunas (3 aqui)*/
     background-color: orange;
     padding: 10px; /*margem externa aplicada ao grid*/
     gap: 5px; /*distancia entre as celulas */
-    row-gap: 100px; /*espaco entre as linhas do grid*/
+    /* row-gap: 100px; espaco entre as linhas do grid */
     column-gap: 10px; /*espaco entre as colunas do grid*/
 }
 
@@ -14,4 +14,40 @@
     font-size: 20px;
     text-align: center;
     padding: 20px; /*margem aplicada ao exterior do conteudo do grid*/
+}
+
+.grid-container > header{
+    /* grid-column-start: 1; /*especifica quando comeca o elemento*/
+    /* grid-column-end: 4; determina até onde o elemento vai (FINALIZA NO INICIO DA 4, OU SEJA, ANTES DA SEGUNDA LINHA COMEÇAR) */
+    grid-column: 1/4 ;
+    background-color: teal;
+    border: 1px solid black;
+    font-size: 36px;
+    color:white;
+    text-align: center;
+    padding: 10px; /*margem aplicada ao exterior do conteudo do grid*/
+}
+
+#esp{  
+    /* grid-row-start: 2;
+    grid-row-end: 5;
+    /* grid-row: 2/5; "isso aqui tambem funciona" */
+    /* grid-column: 2/3; */ 
+
+    grid-area: 2 / 2 / span 3 / span 1; /*inicia na linha 2, coluna 2, ocupa 3 linhas, ocupa 1 coluna*/
+    background-color: goldenrod;
+    border: 1px solid black;
+    font-size: 36px;
+    text-align: center;
+    padding: 10px; /*margem aplicada ao exterior do conteudo do grid*/
+}
+
+.grid-container > footer{
+    /* grid-column: 2/4; */
+    grid-area: 5 / 2 / span 1 / span 2;
+    background-color: lightpink;
+    border: 2px solid black;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
 }
